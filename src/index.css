@@ -1,0 +1,48 @@
+@import "tailwindcss";  /*for tailwind to work*/
+
+/* creating custom theme*/
+@theme {
+  --color-background: #0B1120;  /* Main page background */
+  --color-foreground: #F8FAFC;
+
+  --color-surface: #162033;     /* Navbar, modals, floating sections */
+  --color-card: #1E293B;        /* Cards, containers */
+
+  --color-primary: #FACC15;              /* Main brand color, CTA buttons */
+  --color-primary-foreground: #0B1120;   /* Text on yellow buttons */
+
+  --color-secondary: #334155;            /* Secondary buttons, tags, badges */
+  --color-secondary-foreground: #F8FAFC; /* Text on secondary elements */
+
+  --color-muted: #111827;                /* Footer, inputs, low-priority sections */
+  --color-muted-foreground: #94A3B8;     /* Paragraphs, descriptions, helper text */
+
+  --color-border: #475569;               /* Borders, dividers, outlines */
+  --color-highlight: #38BDF8;            /* Hover effects, glows, special accents */
+
+  --radius: 0.75rem;
+}
+
+/*initial elements default */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  /* setting the theme*/
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Inter", sans-serif;
+  }
+  .font-serif{
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer components {
+  .glass {
+    background-color: color-mix(in srgb, var(--color-surface) 50% , transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+}
