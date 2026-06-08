@@ -50,10 +50,22 @@
     backdrop-filter: blur(24px);
     border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
   }
+  .glow-text {
+    text-shadow : 0 0 30px
+    color-mix(in srgb, var(--color-primary) 50%, transparent);
+  }
 }
 
 @utility animate-fade-in  {
    animation: local-fade-in 0.8s ease-out both;
+
+}
+@utility delay-100 {
+  animation-delay : 100ms;
+}
+
+@utility delay-800 {
+  animation-delay : 800ms
 }
 
 @keyframes local-fade-in {
@@ -70,18 +82,27 @@
     }
   }
 
-  @keyframes slow-drift {
-    0%,
-    100% {
-      transform: translate(0,0);
-    }
-    25% {
-      transform: translate(20-px, -30px);
+  @utility star-glow {
+    box-shadow: 0 0 8px 2px color-mix(in srgb, var(--color-primary) 50%, transparent)
+  }
+
+  @keyframes cosmic-loop {
+    0% {
+      opacity: 0.2;
+      transform: translate(0,0) scale (0.8);
     }
     50% {
-      transform: translate(-15px, -20px);
+      opacity: 1;
+      transform: translate(var(--drift-x, 20px), var(--drift-y, 20px)) scale(1.2);
     }
-     75% {
-      transform: translate(30px, 10px);
+    100% {
+      opacity: 0.2;
+      transform: translate(calc(var(--drift-x, 20px) *2), calc(var(--drift-y, 20px) *2)) scale(0.8);
     }
   }
+
+  @utility animate-cosmic {
+    animation: cosmic-loop 10s ease-in-out infinite alternate;
+  }
+    
+  
