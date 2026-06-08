@@ -1,4 +1,6 @@
 import {Button} from '@/components/Button';
+import { ArrowRight, Download } from 'lucide-react';
+import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
 
 export const Hero = () => {
     return (
@@ -9,7 +11,7 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background"/>
         </div> */}
 
-    {/* Dots Container */}
+    {/* Dots Container 
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(60)].map((_, i) => {
                 const cosmicDuration = `${10 + Math.random() *20}s`;
@@ -36,7 +38,7 @@ export const Hero = () => {
                     />
                     );
                 })}
-            </div>
+            </div>*/ }
 
             {/* Content */}
             <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
@@ -46,7 +48,7 @@ export const Hero = () => {
                         <div className="animate-fade-in">
                             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                             <span className="w-2 h-2 bg-primary rounded-full animate-pulse"/>
-                                Full Stack Developer 
+                                UI UX Designer 
                                 </span>
                         </div>
 
@@ -57,21 +59,24 @@ export const Hero = () => {
                                 <br />
                                 Shaping <span className =" font-serif italic font-normal text-slate-200">seamless interactions.</span>
                             </h1>
-                            <p className="text-lg text-muted-foreground max-w-lg animate-fade-in delay-800">
+                            <p className="text-lg text-muted-foreground max-w-lg animate-fade-in delay-300">
                                 Hi, I’m Angelica Toquero - a UI/UX designer. I shape digital experiences through high-fidelity interactive prototypes, 
                                 aligning user goals with business needs through thoughtful, intentional design.
                             </p>   
                         </div>
-                        {/* CTA */}
-                        <div>
-                            <Button size="lg">Contact Me</Button>
-                        </div>
 
+                        {/* CTA */}
+                        <div className='flex flex-wrap gap-4 animate-fade-in delay-500'>
+                        <Button className="lg">Contact Me <ArrowRight className='w-5 h-5'/></Button>
+                          <AnimatedBorderButton/>
+                       
+                       
+                        </div>
                     </div>
 
                     {/* Picture Column */}
                 </div>
             </div>
     </section>
-    )
+    );
 };
