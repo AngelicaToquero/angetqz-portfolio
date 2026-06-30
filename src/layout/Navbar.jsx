@@ -16,8 +16,8 @@ export const Navbar = () => {
     <header className = "fixed top-0 left-0 right-0 bg-transparent py-5 z-50">
         <nav className = "mx-auto px-6 flex items-center justify-between">
            {/* logo left side */}
-            <a href="#" className="text-xl font-bold tracking-tight hover:text-primary ">
-                Atrqz<span className="text-primary">.</span>
+            <a href="#" className="text-xl font-bold tracking-tight hover:text-primary ">Atrqz
+                {/* Atrqz<span className="text-primary">.</span> */}
             </a>
 
             {/* Desktop navigations  */}

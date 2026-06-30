@@ -1,6 +1,7 @@
 import {Button} from '@/components/Button';
 import { ArrowRight, Download } from 'lucide-react';
 import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
+import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 
 export const Hero = () => {
     return (
@@ -11,7 +12,7 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background"/>
         </div> */}
 
-    {/* Dots Container 
+     {/* Dots Container  */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {[...Array(60)].map((_, i) => {
                 const cosmicDuration = `${10 + Math.random() *20}s`;
@@ -38,7 +39,7 @@ export const Hero = () => {
                     />
                     );
                 })}
-            </div>*/ }
+            </div>
 
             {/* Content */}
             <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
@@ -69,9 +70,22 @@ export const Hero = () => {
                         <div className='flex flex-wrap gap-4 animate-fade-in delay-500'>
                         <Button className="lg">Contact Me <ArrowRight className='w-5 h-5'/></Button>
                           <AnimatedBorderButton/>
-                       
-                       
                         </div>
+
+                        {/* Social Links */}
+                        <div className='flex items-center gap-4 animate-fade-in animation-delay-300 '>
+                            <span className='text-sm text-muted-foreground'>Follow me: </span> 
+                            {[
+                                { icon: FaGithub, href: "#"},
+                                { icon: FaLinkedin, href: "#"},
+                                { icon: FaFacebook, href: "#"},
+                            ].map((social, idx) => (
+                                <a key={idx} href={social.href} className='p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300' >
+                                    {<social.icon className='w-5 h-5'/>}
+                                    </a>
+                            ))}
+                        </div>
+                        
                     </div>
 
                     {/* Picture Column */}
