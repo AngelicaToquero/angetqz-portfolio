@@ -3,6 +3,17 @@ import { ArrowRight, Download } from 'lucide-react';
 import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 
+
+const skill  = [
+    "React",
+    "SQL",
+    "PostgreSQL",
+    "Java",
+    "Node.js",
+    "Javascript",
+    "TailwindCSS",
+];
+ 
 export const Hero = () => {
     return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -118,6 +129,21 @@ export const Hero = () => {
                             
                             </div>
                     </div>
+                    </div>
+
+                </div>
+                {/* Skills Section */}
+                <div className='mt-20 animate-fade-in animate-delay-500'>
+                    <p className='text-sm mb-6 text-center'> My Tech Stack</p>
+                    <div className='relative overflow-hidden'>
+                        <div className='flex animate-marquee'>
+                            {[...skill, ...skill].map((skill, idx) => (
+                                <div key={idx} className='flex-shrink-0 px-8 py-4'>
+                                    <span className='text-xl font-semibold text-muted-foreground/50
+                                     hover:text-primary transition-colors'>{skill}</span> 
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
