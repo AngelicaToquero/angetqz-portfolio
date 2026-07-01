@@ -54,11 +54,21 @@
     text-shadow : 0 0 30px
     color-mix(in srgb, var(--color-primary) 50%, transparent);
   }
+
+  .glow-border {
+    box-shadow: 0 0 20px
+    color-mix(in srgb, var(--color-primary) 40%, transparent),
+    inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+  }
 }
 
 @utility animate-fade-in  {
    animation: local-fade-in 0.8s ease-out both;
 
+}
+
+@utility animate-float {
+  animation:  float 4s ease-in-out infinite;
 }
 @utility delay-100 {
   animation-delay : 100ms;
@@ -71,6 +81,9 @@
 @utility delay-300 {
   animation-delay : 300ms
 }
+@utility animate-cosmic {
+    animation: cosmic-loop 10s ease-in-out infinite alternate;
+  }
 
 .animated-border:hover {
   background-color: color-mix(in srgb, #c4c126 15%, transparent);
@@ -106,6 +119,16 @@
     }
   }
 
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px)
+    }
+  }
+
   @utility star-glow {
     box-shadow: 0 0 8px 2px color-mix(in srgb, var(--color-primary) 50%, transparent)
   }
@@ -125,8 +148,6 @@
     }
   }
 
-  @utility animate-cosmic {
-    animation: cosmic-loop 10s ease-in-out infinite alternate;
-  }
+  
     
   
