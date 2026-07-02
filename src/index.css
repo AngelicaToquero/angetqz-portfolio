@@ -99,6 +99,13 @@
   animation: animated-border 1.5s linear infinite;
 }
 
+.timeline-glow {
+  box-shadow: 0 0 40px
+  color-mix(in srgb, var(--color-primary) 35%, transparent)
+  0 0 80px
+  color-mix(in srgb, var(--color-primary)25%, ransparent)
+}
+
 /* SVG Line Chasing Keyframes */
 @keyframes animated-border {
   0% {

@@ -35,15 +35,15 @@ export const Projects = () => {
 
             {/* Projects List */}
             <div className="grid md:grid-cols-2 gap-8">
-                {projects.map((projects, idx) => (
+                {projects.map((project, idx) => (
                     <div key={idx}
                         className="group glass rounded-2xl overflow-hidden animate-fade-in"
-                        sytle = {{animationDelay: `${(idx + 1) * 100}ms`}}
+                        style = {{animationDelay: `${(idx + 1) * 100}ms`}}
                         >
                         {/* Image */}
                         <div className="relative overflow-hidden aspect-video">
-                           <img src={projects.image} 
-                           alt={projects.titles}
+                           <img src={project.image} 
+                           alt={project.titles}
                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                            /> 
                            </div>
@@ -51,14 +51,14 @@ export const Projects = () => {
                            {/* Contents */}
                            <div className="space-y-4 p-6">
                             <div className="flex items-start justify-between">
-                                <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">{projects.title}</h3>
+                                <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">{project.title}</h3>
                                 <ArrowUpRight className="w-5 h-5 text-muted-foreground
                                 group-hover:text-primary
                                 group-hover:translate-x-1
-                                group=hover: -translate-y-1 transition-all"/>
+                                group-hover:-translate-y-1 transition-all"/>
                             </div>
-                            <p className="text-sm text-muted-foreground">{projects.description}</p>
-                            <div className="flex flex-wrap gap-2">{projects.tags.map((tag, tagIdx) => (
+                            <p className="text-sm text-muted-foreground">{project.description}</p>
+                            <div className="flex flex-wrap gap-2">{project.tags.map((tag, tagIdx) => (
                                 <span
                                 key={tagIdx} 
                                 className="px-4 py-1.5 rounded-full bg-surface
