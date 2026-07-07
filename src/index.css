@@ -116,6 +116,14 @@
   }
 }
 
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 0.8s step-start infinite;
+}
+
 @keyframes local-fade-in {
     from {
       opacity: 0;
