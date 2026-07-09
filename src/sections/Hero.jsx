@@ -4,19 +4,19 @@ import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import { useState, useEffect, useMemo } from "react";
 
-const skill = [
-    "React",
-    "SQL",
-    "PostgreSQL",
-    "Java",
-    "Node.js",
-    "Javascript",
-    "TailwindCSS",
-];
+// 🚀 Structured Object to show off your specialized categories 
+const techStackData = {
+    designUi: ["Figma", "TailwindCSS", "Bootstrap"],
+    frontend: ["JavaScript", "TypeScript", "React", "Next.js"],
+    backend: ["Node.js", "Java", "PHP", "SQL"],
+    cms: ["WordPress", "Git & GitHub"]
+};
 
-// 🌌 NEW: Isolated Background Component to prevent star-jittering on text updates
+// Flattened array created automatically from the object above for your marquee animation
+const skill = Object.values(techStackData).flat();
+
+// Isolated Background Component to prevent star-jittering on text updates
 const CosmicBackground = () => {
-    // useMemo locks these random values in place so they never recalculate on re-renders
     const stars = useMemo(() => {
         return [...Array(60)].map((_, i) => ({
             id: i,
@@ -51,7 +51,7 @@ const CosmicBackground = () => {
 
 export const Hero = () => {
     // 💡 Typing Effect State Logic
-    const roles = ["Front-End Developer", "UI/UX Designer"];
+    const roles = ["Front-End Developer", "UI/UX Designer", "Web Developer"];
     const [currentRoleIdx, setCurrentRoleIdx] = useState(0);
     const [currentText, setCurrentText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
@@ -79,13 +79,13 @@ export const Hero = () => {
         return () => clearTimeout(timer);
     }, [currentText, isDeleting, currentRoleIdx]);
 
-    //CTA to Contact Section
+    // CTA to Contact Section
     const scrollToContact = (e) => {
-    e.preventDefault(); // Prevents sudden layout snaps
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-        contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+        e.preventDefault(); 
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
     };
 
     return (
@@ -129,15 +129,15 @@ export const Hero = () => {
                             <Button className="lg" onClick={scrollToContact}>Contact Me <ArrowRight className='w-5 h-5'/></Button>
                             
                             <a
-                            href = "ResumeTest_AST.pdf"
-                            download="ResumeTest_AST.pdf"
-                            target="_blank"
-                            rel = "noreferrer"
+                                href="ResumeTest_AST.pdf"
+                                download="ResumeTest_AST.pdf"
+                                target="_blank"
+                                rel="noreferrer"
                             >
-                            <AnimatedBorderButton>
-                                <Download className="w-5 h-5"/>
-                                Download CV
-                            </AnimatedBorderButton>
+                                <AnimatedBorderButton>
+                                    <Download className="w-5 h-5"/>
+                                    Download CV
+                                </AnimatedBorderButton>
                             </a>
                         </div>
 
@@ -146,10 +146,10 @@ export const Hero = () => {
                             <span className='text-sm text-muted-foreground'>Follow me: </span> 
                             {[
                                 { icon: FaGithub, href: "https://github.com/AngelicaToquero"},
-                                { icon: FaLinkedin, href: "www.linkedin.com/in/angelica-toquero-620604376"},
+                                { icon: FaLinkedin, href: "https://www.linkedin.com/in/angelica-toquero-620604376"},
                                 { icon: FaFacebook, href: "https://www.facebook.com/angetqz"},
                             ].map((social, idx) => (
-                                <a key={idx} href={social.href} className='p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300' >
+                                <a key={idx} href={social.href} target="_blank" rel="noreferrer" className='p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300' >
                                     <social.icon className='w-5 h-5'/>
                                 </a>
                             ))}
@@ -182,14 +182,16 @@ export const Hero = () => {
 
                 </div>
 
-                {/* Skills Section */}
+                {/* Skills Marquee Section */}
                 <div className='mt-20 animate-fade-in animate-delay-500'>
-                    <p className='text-sm mb-6 text-center'> My Tech Stack</p>
-                    <div className='relative overflow-hidden'>
+                    <p  className='"text-secondary-foreground text-sm font-medium tracking-wider mb-6 text-center uppercase'>My Tech Stack</p>
+                    <div  className='relative overflow-hidden mask-gradient'> {/* Added a subtle tip here if you want edge fading */}
                         <div className='flex animate-marquee'>
-                            {[...skill, ...skill].map((skill, idx) => (
+                            {[...skill, ...skill].map((item, idx) => (
                                 <div key={idx} className='flex-shrink-0 px-8 py-4'>
-                                    <span className='text-xl font-semibold text-muted-foreground/50 hover:text-primary transition-colors'>{skill}</span> 
+                                    <span className='text-xl font-semibold text-muted-foreground/40 hover:text-primary transition-colors cursor-default whitespace-nowrap'>
+                                        {item}
+                                    </span> 
                                 </div>
                             ))}
                         </div>

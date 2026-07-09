@@ -11,7 +11,7 @@ const experiences = [
         period: "June 2025 - August 2025",
         role: "Junior Data Analyst",
         company: "Droplets Inc",
-        description: "Extracted and manipulated structural data models using advanced Excel pivot mechanisms and built analytical dashboards.",
+        description: "Extracted and manipulated structural data models using advanced mechanisms and built analytical dashboards.",
         technologies: ["Excel", "PowerBI"],
         current: false
     },
@@ -26,12 +26,12 @@ export const Experience = () => {
             <div className="container mx-auto relative px-6 z-10">
                 {/* Section Header */}
                 <div className="max-w-3xl mb-16">
-                    <span className="text-sm uppercase font-medium tracking-wider text-secondary-foreground">Career Journey</span>
+                    <span className="text-sm uppercase font-medium tracking-wider text-secondary-foreground">My Path</span>
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mt-4 mb-6 leading-tight animate-fade-in glow-text">
-                        Experience <span className="font-serif font-normal text-secondary-foreground">that shapes impact.</span>
+                        Learning <span className="font-serif font-normal text-secondary-foreground">by Doing.</span>
                     </h2>
                     <p className="text-muted-foreground animate-fade-in animation-delay-100">
-                        A chronological record of my professional growth, technical skill expansion, and creative contributions.
+                        A quick summary of my roles, the skills I have picked up, and the hands-on experiences that keep me moving forward.
                     </p>
                 </div>
 

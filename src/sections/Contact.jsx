@@ -84,12 +84,12 @@ export const Contact = () => {
             <div className="container mx-auto px-6 relative z-10">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="text-sm uppercase font-medium tracking-wider text-secondary-foreground">Get In Touch</span>
+                    <span className="text-sm uppercase font-medium tracking-wider text-secondary-foreground">Let's Chat</span>
                     <h2 className="text-4xl md:text-5xl font-bold text-primary mt-4 mb-6 leading-tight animate-fade-in glow-text">
-                        Let's Build <span className="font-serif italic font-normal text-secondary-foreground">something great</span>
+                        Let's Build <span className="font-serif italic font-normal text-secondary-foreground">something great.</span>
                     </h2>
                     <p className="text-muted-foreground animate-fade-in animation-delay-100">
-                        Have a question, an idea, or a project you'd like to collaborate on? Drop a message below!
+                        Got an idea or a problem you want to solve? My inbox is always open. Send over a message!
                     </p>
                 </div>
 
@@ -183,7 +183,7 @@ export const Contact = () => {
                                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"/> 
                                 <span className="font-medium">Currently Available</span>
                             </div>
-                            <p className="text-sm  text-muted-foreground">Hi, I am Currently available for work and everything bla bla bla</p>
+                            <p className="text-sm  text-muted-foreground">I’m wide open for freelance roles, full-time positions, or fun collaborations. Let’s make it happen!</p>
                         </div>
                     </div>
                 </div>
