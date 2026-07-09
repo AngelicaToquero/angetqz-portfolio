@@ -2,7 +2,7 @@ const experiences = [
     {
         period: "November 2025 - December 2025",
         role: "UI UX & WordPress Intern",
-        company: "Ayahtek",
+        company: "Ayahtek Corporation",
         description: "Crafted high-fidelity interfaces, created responsive design layouts, and customized intuitive WordPress components.",
         technologies: ["Figma", "Canva", "WordPress"],
         current: true
@@ -10,7 +10,7 @@ const experiences = [
     {
         period: "June 2025 - August 2025",
         role: "Junior Data Analyst",
-        company: "Droplets Inc",
+        company: "Droplets of Nature, Inc",
         description: "Extracted and manipulated structural data models using advanced mechanisms and built analytical dashboards.",
         technologies: ["Excel", "PowerBI"],
         current: false

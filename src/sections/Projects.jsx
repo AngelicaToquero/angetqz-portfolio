@@ -1,98 +1,85 @@
 import { ArrowUpRight, X } from "lucide-react";
 import { useState } from "react";
 
-// 🎨 FIGMA PROJECTS (4-5 per row grid)
+// FIGMA PROJECTS 
 const figmaProjects = [
     {
-      title: "KidoPass",
-      description: "A digital hub designed with engaging, creative, and vibrant interfaces tailored for children.",
-      image: "hero.jpg",
+      title: "Quick Bus",
+      description: "A unified online ticket booking platform integrating major Philippine bus networks into a single, seamless reservation system.",
+      image: "/projects/quickbus.png",
       tags: ["UI/UX Design", "Layouts", "Prototyping"],
-      link: "#",
-      github: "#",
+      link: "https://www.figma.com/design/Kzo15o55JnXTcLZzUemtUg/Angelica-s-Projects?node-id=2-3&t=GEnHwh0gBVhivIrg-1",
       hasPopup: false
     },
     {
-      title: "Pastry Hub",
-      description: "A high-end gourmet baking interface showcasing clean custom typography grids.",
-      image: "/projects/dp.jpg",
-      tags: ["Visual Design", "Component System"],
-      link: "#",
-      github: "#",
+      title: "HideAway",
+      description: "An elegant, premium booking experience designed for boutique rural escapes and secluded architectural cabin rentals.",
+      image: "/projects/hideaway.png",
+      tags: ["Visual Design", "Wireframing", "Component System"],
+      link: "https://www.figma.com/design/Kzo15o55JnXTcLZzUemtUg/Angelica-s-Projects?node-id=169-5393&t=GEnHwh0gBVhivIrg-1",
       hasPopup: false
     },
     {
-      title: "Tech Tumbler",
-      description: "Sleek landing page focused on minimal aesthetics and premium product rendering assets.",
-      image: "hero.jpg",
-      tags: ["Product Layout", "Assets"],
-      link: "#",
-      github: "#",
+      title: "HydraVibe",
+      description: "A vibrant, product-focused e-commerce landing page layout designed with dynamic color theme variants, striking typography, and minimal feature sections.",
+      image: "/projects/hydravibe.png",
+      tags: ["Product Design", "E-Commerce UI", "Layout System"],
+      link: "https://www.figma.com/design/Kzo15o55JnXTcLZzUemtUg/Angelica-s-Projects?node-id=0-1&t=GEnHwh0gBVhivIrg-1",
       hasPopup: false
     },
     {
-      title: "Project Holder 4",
-      description: "Description of your amazing craft, layout structures, and intuitive workflows.",
-      image: "hero.jpg",
-      tags: ["UI/UX Design", "Wireframing"],
-      link: "#",
-      github: "#",
+      title: "Cravery Spot",
+      description: "An immersive, product-focused landing page layout engineered with color variations, bold typography systems, and dynamic brand assets.",
+      image: "/projects/craveryspot.png",
+      tags: ["Landing Page", "Visual Identity", "Interactive UI"],
+      link: "https://www.figma.com/design/Kzo15o55JnXTcLZzUemtUg/Angelica-s-Projects?node-id=0-1&t=GEnHwh0gBVhivIrg-1",
       hasPopup: false
     },
-    {
-      title: "Project Holder 5",
-      description: "Description of your amazing craft, layout structures, and intuitive workflows.",
-      image: "hero.jpg",
-      tags: ["UI/UX Design", "Prototypes"],
-      link: "#",
-      github: "#",
-      hasPopup: false
-    },
-    {
-      title: "Project Holder 6",
-      description: "Description of your amazing craft, layout structures, and intuitive workflows.",
-      image: "hero.jpg",
-      tags: ["UI/UX Design", "Design Language"],
-      link: "#",
-      github: "#",
-      hasPopup: false
-    },
-    {
-      title: "Website Rebrand Showcase",
-      description: "Complete UI modernization, custom layout overhaul, and structural design system updates.",
-      image: "hero.jpg", // Looks exactly like a normal project image holder
-      tags: ["Rebranding", "UI/UX Design", "Layout System"],
-      link: "#",
-      github: "#",
-      hasPopup: true, // ✨ Triggers the popup modal seamlessly
-      modalContent: {
-        title: "Website Rebrand Case Study",
-        role: "Product Designer",
-        timeline: "3 Months",
-        problem: "The original layout layout lacked consistent spacing hierarchies, causing user confusion during navigation. The interface required a structured aesthetic overhaul to present content cleanly.",
-        solution: "I created custom grid structures, re-scaled the typography for fluid mobile responsiveness, and established a modular component system to elevate overall usability."
-      }
-    }
+    
+    //Add projects
+    // {
+    //   title: "Project Holder 5",
+    //   description: "Description of your amazing craft, layout structures, and intuitive workflows.",
+    //   image: "hero.jpg",
+    //   tags: ["UI/UX Design", "Prototypes"],
+    //   link: "#",
+    //   hasPopup: false
+    // },
+    
+    // for nda
+    // {
+    //   title: "Website Rebrand Showcase",
+    //   description: "Complete UI modernization, custom layout overhaul, and structural design system updates.",
+    //   image: "hero.jpg", 
+    //   tags: ["Rebranding", "UI/UX Design", "Layout System"],
+    //   link: "", // Empty because it opens the popup below
+    //   hasPopup: true, 
+    //   modalContent: {
+    //     title: "Website Rebrand Case Study",
+    //     role: "Product Designer",
+    //     timeline: "3 Months",
+    //     problem: "The original layout layout lacked consistent spacing hierarchies, causing user confusion during navigation. The interface required a structured aesthetic overhaul to present content cleanly.",
+    //     solution: "I created custom grid structures, re-scaled the typography for fluid mobile responsiveness, and established a modular component system to elevate overall usability."
+    //   }
+    // }
 ];
 
-// 🌐 WEB DEVELOPMENT PROJECTS 
+// WEB DEVELOPMENT PROJECTS 
 const webProjects = [
     {
-      title: "Portfolio Terminal",
-      description: "An interactive code playground layout built using clean semantic components.",
-      image: "hero.jpg",
-      tags: ["React", "TailwindCSS", "Vite"],
-      link: "#",
-      github: "#",
+      title: "NEUVIS",
+      description: "NEUVIS is a mobile-first visitor management system that helps security officers and administrators log, verify, and track visitor check-ins and check-outs—all in real time.",
+      image: "/projects/neuvis.png",
+      tags: ["React Native", "Expo", "Supabase", "TypeScript"],
+      github: "https://github.com/PiaMacalanda/NEUVIS",
       hasPopup: false
     },
     {
-      title: "E-Commerce Pipeline",
-      description: "Full stack marketplace database logic built with dynamic state handling variables.",
-      image: "hero.jpg",
-      tags: ["Node.js", "SQL", "JavaScript"],
-      link: "#",
-      github: "#",
+      title: "CEREBRO",
+      description: "An undergraduate thesis project exploring EEG-based focus classification in academic settings. Cerebro is a desktop app for live EEG acquisition, on-device deep-learning inference, and session analytics, built with Tauri v2, React 19, and TypeScript.",
+      image: "/projects/cerebro.png",
+      tags: ["Tauri v2", "React 19", "TypeScript"],
+      github: "https://github.com/romnoelp/Cerebro",
       hasPopup: false
     }
 ];
@@ -103,18 +90,20 @@ export const Projects = () => {
     const handleProjectClick = (e, project) => {
         if (project.hasPopup) {
             e.preventDefault();
-            setActiveProjectPopup(project); // Mount modal popup view
+            setActiveProjectPopup(project); 
         }
     };
 
     // Reusable Functional Grid Component 
     const ProjectGrid = ({ items }) => (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {items.map((project, idx) => (
                 <a 
                     key={idx}
-                    href={project.hasPopup ? undefined : project.link}
+                    href={project.hasPopup ? undefined : (project.link || project.github || "#")}
                     onClick={(e) => handleProjectClick(e, project)}
+                    target={project.hasPopup ? undefined : "_blank"}
+                    rel="noreferrer"
                     className="group glass rounded-2xl overflow-hidden animate-fade-in flex flex-col justify-between h-full hover:translate-y-[-4px] transition-all duration-300 cursor-pointer"
                     style={{ animationDelay: `${(idx + 1) * 100}ms` }}
                 >
@@ -164,7 +153,7 @@ export const Projects = () => {
         <section id="projects" className="py-32 relative overflow-hidden">
             <div className="container mx-auto relative px-6 z-10">
                 
-                {/* Your Original Preferred Section Header */}
+                {/* Section Header */}
                 <div className="text-center mx-auto max-w-3xl mb-16">
                     <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">Project Showcase</span>
                     <h2 className="text-primary text-4xl mt-4 mb-6 md:text-5xl font-bold leading-tight animate-fade-in glow-text">
@@ -196,12 +185,11 @@ export const Projects = () => {
 
             </div>
 
-            {/* 🌌 MODAL POPUP (Clean mobile-first design system layout) */}
+            {/* 🌌 MODAL POPUP */}
             {activeProjectPopup && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
                     <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto glass rounded-3xl p-6 md:p-8 glow-border shadow-2xl space-y-6">
                         
-                        {/* Mobile Accessible Top Exit Button */}
                         <button 
                             onClick={() => setActiveProjectPopup(null)}
                             className="absolute top-6 right-6 p-2 rounded-xl bg-muted/20 text-muted-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 z-20"
@@ -209,7 +197,6 @@ export const Projects = () => {
                             <X className="w-5 h-5" />
                         </button>
 
-                        {/* Showcase Context Image Inside the Popup */}
                         <div className="w-full aspect-video rounded-xl overflow-hidden bg-muted/20 border border-border/40">
                             <img 
                                 src={activeProjectPopup.image} 
@@ -218,14 +205,12 @@ export const Projects = () => {
                             />
                         </div>
 
-                        {/* Title Header */}
                         <div className="border-b border-border/50 pb-4 pr-10">
                             <h3 className="text-2xl font-bold text-white leading-tight">
                                 {activeProjectPopup.modalContent.title}
                             </h3>
                         </div>
 
-                        {/* Metadata Row */}
                         <div className="grid grid-cols-2 gap-4 text-sm border-b border-border/30 pb-4">
                             <div>
                                 <span className="block text-xs uppercase text-muted-foreground font-medium mb-0.5">Role</span>
@@ -237,7 +222,6 @@ export const Projects = () => {
                             </div>
                         </div>
 
-                        {/* Case Study Summary Details */}
                         <div className="space-y-4 text-sm md:text-base leading-relaxed text-muted-foreground pb-2">
                             <div>
                                 <strong className="text-white block font-semibold mb-1">The Problem:</strong>
