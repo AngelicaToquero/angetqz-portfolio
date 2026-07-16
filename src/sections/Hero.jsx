@@ -129,8 +129,8 @@ export const Hero = () => {
                             <Button className="lg" onClick={scrollToContact}>Contact Me <ArrowRight className='w-5 h-5'/></Button>
                             
                             <a
-                                href="Resume_Toquero,Angelica.pdf"
-                                download="Resume_Toquero,Angelica.pdf"
+                                href="Toquero_Angelica_Resume.pdf"
+                                download="Toquero_Angelica_Resume.pdf"
                                 target="_blank"
                                 rel="noreferrer"
                             >

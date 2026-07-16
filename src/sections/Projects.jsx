@@ -71,7 +71,7 @@ const webProjects = [
       description: "NEUVIS is a mobile-first visitor management system that helps security officers and administrators log, verify, and track visitor check-ins and check-outs—all in real time.",
       image: "/projects/neuvis.png",
       tags: ["React Native", "Expo", "Supabase", "TypeScript"],
-      github: "https://github.com/PiaMacalanda/NEUVIS",
+      github: "https://github.com/AngelicaToquero/NEUVIS",
       hasPopup: false
     },
     {
@@ -79,7 +79,7 @@ const webProjects = [
       description: "An undergraduate thesis project exploring EEG-based focus classification in academic settings. Cerebro is a desktop app for live EEG acquisition, on-device deep-learning inference, and session analytics, built with Tauri v2, React 19, and TypeScript.",
       image: "/projects/cerebro.png",
       tags: ["Tauri v2", "React 19", "TypeScript"],
-      github: "https://github.com/romnoelp/Cerebro",
+      github: "https://github.com/AngelicaToquero/Cerebro",
       hasPopup: false
     }
 ];
