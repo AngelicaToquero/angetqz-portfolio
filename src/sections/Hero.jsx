@@ -51,7 +51,7 @@ const CosmicBackground = () => {
 
 export const Hero = () => {
     // 💡 Typing Effect State Logic
-    const roles = ["Front-End Developer", "UI/UX Designer", "Web Developer"];
+    const roles = ["Web Developer", "UI/UX Designer"];
     const [currentRoleIdx, setCurrentRoleIdx] = useState(0);
     const [currentText, setCurrentText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
@@ -129,8 +129,8 @@ export const Hero = () => {
                             <Button className="lg" onClick={scrollToContact}>Contact Me <ArrowRight className='w-5 h-5'/></Button>
                             
                             <a
-                                href="ResumeTest_AST.pdf"
-                                download="ResumeTest_AST.pdf"
+                                href="Toquero,Angelica_Resume.pdf"
+                                download="Toquero,Angelica_Resume.pdf"
                                 target="_blank"
                                 rel="noreferrer"
                             >

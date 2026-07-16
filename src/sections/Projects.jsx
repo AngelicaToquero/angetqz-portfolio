@@ -177,7 +177,7 @@ export const Projects = () => {
                 <div>
                     <div className="text-center mb-10 animate-fade-in">
                         <h3 className="text-2xl font-bold tracking-widest text-primary uppercase glow-text border-b border-primary/10 pb-4 max-w-xs mx-auto">
-                            Web Projects
+                            Development Projects
                         </h3>
                     </div>
                     <ProjectGrid items={webProjects} />

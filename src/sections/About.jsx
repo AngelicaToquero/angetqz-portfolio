@@ -54,7 +54,7 @@ export const About = () => {
                             
                             {/* Paragraph 2: Generalized Frontend Development Focus */}
                             <p>
-                                Alongside my creative side, I have a deep passion for frontend development. I truly love the logic, coding, and problem-solving involved in engineering modern web applications. Having a strong technical foundation allows me to write clean, semantic code that breathes real life into programmatic systems, builds responsive digital environments, and optimizes user interaction layer by layer inside the browser.
+                                Alongside my creative side, I have a deep passion for website and mobile development. I truly love the logic, coding, and problem-solving involved in engineering modern web applications. Having a strong technical foundation allows me to write clean, semantic code that breathes real life into programmatic systems, builds responsive digital environments, and optimizes user interaction layer by layer inside the browser.
                             </p>
                         </div>
 
