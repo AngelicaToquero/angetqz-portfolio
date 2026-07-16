@@ -8,7 +8,7 @@ const experiences = [
         current: true
     },
     {
-        period: "June 2025 - August 2025",
+        period: "June 2024 - August 2024",
         role: "Junior Data Analyst",
         company: "Droplets of Nature, Inc",
         description: "Extracted and manipulated structural data models using advanced mechanisms and built analytical dashboards.",
